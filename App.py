@@ -35,11 +35,10 @@ def preprocessing_teks(dataset):
 class Item(BaseModel):
     query: str
 
-origin = ["api.guardianai-tv9.com"]
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origin,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
