@@ -35,16 +35,11 @@ def preprocessing_teks(dataset):
 class Item(BaseModel):
     query: str
 
-origins = [
-    "http://localhost:3000",  # React
-    "http://localhost:8080",  # Vue.js
-    "http://localhost:8000",  # Angular
-    "http://103.84.207.4:8000"  # Replace with your actual client origin
-]
+
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
