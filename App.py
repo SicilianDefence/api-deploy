@@ -39,7 +39,7 @@ class Item(BaseModel):
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://guardianai-tv9.com"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
